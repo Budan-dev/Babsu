@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "972367597861",
+    "project_id": "my-expocrypt-app",
+    "storage_bucket": "my-expocrypt-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:972367597861:android:8783a84aa1e61b6e804acc",
+        "android_client_info": {
+          "package_name": "com.babsu.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "972367597861-4mcug6jksn5382rna1hbsirieoiqhbh7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.babsu.app",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "972367597861-dd187taugtbge8050op7ac5uqoeubk4f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyVlXh-1E0F9BkmlwnMKS7QDK3vX3Pydw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "972367597861-dd187taugtbge8050op7ac5uqoeubk4f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "972367597861-fb1qn1743v5j0iacivhhg4t88nuve2je.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.babsu.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
