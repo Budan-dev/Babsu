@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 10,
     height: 55,
-    width: 300,
+    width: 350,
     color: "hsl(180°, 5%, 56%)",
   },
 });

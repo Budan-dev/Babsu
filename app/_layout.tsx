@@ -71,6 +71,15 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen
+          name="ChangePassword"
+          options={{
+            headerShown: true,
+            headerTitle: " ",
+            headerTransparent: true,
+            headerLeft: () => <BackHambugger />,
+          }}
+        />
+        <Stack.Screen
           name="signin"
           options={{
             headerTransparent: true,
@@ -88,6 +97,7 @@ export default function RootLayout() {
             headerLeft: () => <BackHambugger />,
           }}
         />
+
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />

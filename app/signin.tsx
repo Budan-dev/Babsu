@@ -84,6 +84,16 @@ export default function signIn(): JSX.Element {
             Sign Up
           </CustomStartText>
         </CustomStartText>
+
+        <CustomStartText className="text-center pt-3 font-normal">
+          Forgotten Password?{" "}
+          <CustomStartText
+            style={styles.Link}
+            onPress={() => router.push("/ChangePassword")}
+          >
+            Change Password
+          </CustomStartText>
+        </CustomStartText>
       </KeyboardAvoidingView>
     </CustomStartView>
   );

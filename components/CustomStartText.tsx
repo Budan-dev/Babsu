@@ -10,7 +10,7 @@ import { TextProps } from "react-native";
 
 const CustomText = (props: TextProps) => {
   const colorScheme = useColorScheme();
-  const color = colorScheme === "dark" ? "#FFFFFF" : "#293d3d";
+  const color = colorScheme === "dark" ? "#293D3D" : "#678282";
   const [fontsLoaded] = useFonts({
     Alef_400Regular,
     Alef_700Bold,
