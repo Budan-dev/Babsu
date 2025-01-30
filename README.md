@@ -1,41 +1,54 @@
-# Welcome to Babsu Mobile app 👋
+# Busha Mobile App 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern mobile application with secure authentication flow and animated interfaces.
 
-## Get started
+## Features ✅
 
-1. Install dependencies
+- **Welcome Page** with Skia & Reanimated animations
+- **Functional Authentication Flow**:
+  - Sign Up
+  - Sign In
+  - Password Recovery
+  - Sign Out
+- **Tabs Section** (Under Development 🚧)
+- Development build ready for Android/iOS
 
+## Getting Started 🚀
+
+1. **Clone Repository**
    ```bash
-   npm install
+   git clone <repository-url>
+   cd busha-app
    ```
 
-2. Start the app
+npm install
 
-   ```bash
-    npx expo start
-   ```
+npx expo start
 
-In the output, you'll find options to open the app in a
+## Project Structure 📂
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- /app
+- /navigation
+- /screens
+- /components
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Dependencies ⚙️
 
-## Get a fresh project
+- React Navigation
+- React Native Skia
+- React Native Reanimated
+- Expo Auth Session
 
-When you're ready, run:
+## Contributing 🤝
 
-```bash
-npm run reset-project
-```
+- contributions! Please:
+- Fork the repository
+- Request maintainer permission before making significant changes
+- Create a feature branch
+- Submit PR with detailed description
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Notes 📝
 
-## NOTE
-
-This React Native Mobile Application was built and installed in Development mode is still under development
-Feel free to add and try to improve this projects
+- ❗ Current version installed in development mode
+- 🚧 Tabs section implementation in progress - contributions welcome!
+- 🔒 All authentication endpoints fully functional and tested
