@@ -41,7 +41,7 @@ npx expo start
 
 ## Contributing 🤝
 
-- contributions! Please:
+- Contributions? Please:
 - Fork the repository
 - Request maintainer permission before making significant changes
 - Create a feature branch
