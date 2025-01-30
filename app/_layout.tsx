@@ -82,19 +82,17 @@ export default function RootLayout() {
         <Stack.Screen
           name="signin"
           options={{
-            headerTransparent: true,
+            headerShown: false,
             headerTitle: "", // Hides the title
             headerTintColor: "white",
-            headerLeft: () => <BackHambugger />,
           }}
         />
         <Stack.Screen
           name="signup"
           options={{
-            headerTransparent: true,
+            headerShown: false,
             headerTitle: "", // Hides the title
             headerTintColor: "white",
-            headerLeft: () => <BackHambugger />,
           }}
         />
 
