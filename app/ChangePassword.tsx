@@ -5,6 +5,7 @@ import {
   TextInput,
   TouchableOpacity,
   StyleSheet,
+  KeyboardAvoidingView,
 } from "react-native";
 import auth from "@react-native-firebase/auth";
 import { useRouter } from "expo-router";
@@ -47,38 +48,45 @@ export default function ResetPassword(): JSX.Element {
 
   return (
     <CustomStartView style={styles.container}>
-      <CustomStartText style={styles.title}>Reset Password</CustomStartText>
-      <InputText
-        value={email}
-        placeholderHeader={"Email"}
-        placeholder="Email"
-        onChangeText={setEmail}
-        autoCapitalize="none"
-        keyboardType="email-address"
-      />
-      <InputText
-        value={newPassword}
-        placeholderHeader={"New Password"}
-        placeholder=" New Password"
-        onChangeText={setNewPassword}
-        secureTextEntry
-      />
-      <InputText
-        placeholder="Confirm Password"
-        placeholderHeader="Confirm New Password"
-        secureTextEntry
-        value={confirmPassword}
-        onChangeText={setConfirmPassword}
-      />
-      <TouchableOpacity
-        style={styles.button}
-        onPress={handleResetPassword}
-        disabled={loading}
-      >
-        <Text style={styles.buttonText}>
-          {loading ? "Sending..." : "Send Reset Email"}
-        </Text>
-      </TouchableOpacity>
+      <KeyboardAvoidingView behavior="padding">
+        <CustomStartText
+          className="text-2xl text-center font-bold tracking-widest mb-7"
+          style={styles.title}
+        >
+          Reset Password
+        </CustomStartText>
+        <InputText
+          value={email}
+          placeholderHeader={"Email"}
+          placeholder="Email"
+          onChangeText={setEmail}
+          autoCapitalize="none"
+          keyboardType="email-address"
+        />
+        <InputText
+          value={newPassword}
+          placeholderHeader={"New Password"}
+          placeholder=" New Password"
+          onChangeText={setNewPassword}
+          secureTextEntry
+        />
+        <InputText
+          placeholder="Confirm Password"
+          placeholderHeader="Confirm New Password"
+          secureTextEntry
+          value={confirmPassword}
+          onChangeText={setConfirmPassword}
+        />
+        <TouchableOpacity
+          style={styles.button}
+          onPress={handleResetPassword}
+          disabled={loading}
+        >
+          <Text style={styles.buttonText}>
+            {loading ? "Sending..." : "Send Reset Email"}
+          </Text>
+        </TouchableOpacity>
+      </KeyboardAvoidingView>
     </CustomStartView>
   );
 }
@@ -88,7 +96,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    padding: 20,
   },
   title: {
     fontSize: 24,

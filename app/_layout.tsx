@@ -18,6 +18,7 @@ import { ActivityIndicator, Button, TouchableOpacity } from "react-native";
 import CustomText from "@/components/CustomText";
 import CustomStartText from "@/components/CustomStartText";
 import BackHambugger from "@/components/BackHambuger";
+import LoadingScreen from "@/components/LoadingScreen";
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
@@ -30,8 +31,15 @@ export default function RootLayout() {
 
   const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState<FirebaseAuthTypes.User | null>();
+  const [showLoadingScreen, setShowLoadingScreen] = useState(true);
   const router = useRouter();
   const segments = useSegments();
+
+  // Simulate 30-second loading screen
+  useEffect(() => {
+    const timer = setTimeout(() => setShowLoadingScreen(false), 10000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const onAuthStateChanged = (user: FirebaseAuthTypes.User | null) => {
     setUser(user);
@@ -58,13 +66,7 @@ export default function RootLayout() {
     }
   }, [loaded]);
 
-  if (!loaded || initializing)
-    return (
-      <CustomView className="flex-1 items-center justify-center">
-        <ActivityIndicator size="large" color="rgb(10,36,36)" />
-        <CustomText>Loading...</CustomText>
-      </CustomView>
-    );
+  if (showLoadingScreen || !loaded || initializing) return <LoadingScreen />;
 
   return (
     <GestureHandlerRootView>
